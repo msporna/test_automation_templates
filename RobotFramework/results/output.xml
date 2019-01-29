@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190130 00:08:10.048" generator="Robot 3.1.1 (Python 2.7.12 on win32)">
+<suite source="C:\Users\Michal\Documents\testProjectTemplates\testProjectTemplates\RobotFramework\Tests" id="s1" name="Tests">
+<suite source="C:\Users\Michal\Documents\testProjectTemplates\testProjectTemplates\RobotFramework\Tests\news_page_tests.robot" id="s1-s1" name="News Page Tests">
+<test id="s1-s1-t1" name="Verify the sort combobox is present">
+<kw type="setup" name="Do test setup" library="shared_keywords">
+<kw name="Go to main page" library="shared_keywords">
+<kw name="| prepare_webdriver_and_go_to_main_page | ${BROWSER} |">
+<msg timestamp="20190130 00:08:10.441" level="FAIL">No keyword with name '| prepare_webdriver_and_go_to_main_page | ${BROWSER} |' found.</msg>
+<status status="FAIL" endtime="20190130 00:08:10.441" starttime="20190130 00:08:10.441"></status>
+</kw>
+<status status="FAIL" endtime="20190130 00:08:10.441" starttime="20190130 00:08:10.441"></status>
+</kw>
+<status status="FAIL" endtime="20190130 00:08:10.441" starttime="20190130 00:08:10.441"></status>
+</kw>
+<kw type="teardown" name="Do test teardown" library="shared_keywords">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190130 00:08:10.441" starttime="20190130 00:08:10.441"></status>
+</kw>
+<status status="PASS" endtime="20190130 00:08:10.441" starttime="20190130 00:08:10.441"></status>
+</kw>
+<doc>test2</doc>
+<tags>
+<tag>CHROME_TESTS</tag>
+<tag>NEWS_PAGE</tag>
+</tags>
+<status status="FAIL" endtime="20190130 00:08:10.441" critical="yes" starttime="20190130 00:08:10.441">Setup failed:
+No keyword with name '| prepare_webdriver_and_go_to_main_page | ${BROWSER} |' found.</status>
+</test>
+<doc>test cases related to ...</doc>
+<status status="FAIL" endtime="20190130 00:08:10.441" starttime="20190130 00:08:10.094"></status>
+</suite>
+<suite source="C:\Users\Michal\Documents\testProjectTemplates\testProjectTemplates\RobotFramework\Tests\smoke_tests.robot" id="s1-s2" name="Smoke Tests">
+<test id="s1-s2-t1" name="Verify sony logo has a correct related link">
+<kw type="setup" name="Do test setup" library="shared_keywords">
+<kw name="Go to main page" library="shared_keywords">
+<kw name="| prepare_webdriver_and_go_to_main_page | ${BROWSER} |">
+<msg timestamp="20190130 00:08:10.472" level="FAIL">No keyword with name '| prepare_webdriver_and_go_to_main_page | ${BROWSER} |' found.</msg>
+<status status="FAIL" endtime="20190130 00:08:10.472" starttime="20190130 00:08:10.472"></status>
+</kw>
+<status status="FAIL" endtime="20190130 00:08:10.472" starttime="20190130 00:08:10.472"></status>
+</kw>
+<status status="FAIL" endtime="20190130 00:08:10.472" starttime="20190130 00:08:10.472"></status>
+</kw>
+<kw type="teardown" name="Do test teardown" library="shared_keywords">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190130 00:08:10.488" starttime="20190130 00:08:10.488"></status>
+</kw>
+<status status="PASS" endtime="20190130 00:08:10.488" starttime="20190130 00:08:10.488"></status>
+</kw>
+<doc>test1</doc>
+<tags>
+<tag>CHROME_TESTS</tag>
+<tag>SMOKE_TESTS</tag>
+</tags>
+<status status="FAIL" endtime="20190130 00:08:10.488" critical="yes" starttime="20190130 00:08:10.472">Setup failed:
+No keyword with name '| prepare_webdriver_and_go_to_main_page | ${BROWSER} |' found.</status>
+</test>
+<doc>test cases related to ...</doc>
+<status status="FAIL" endtime="20190130 00:08:10.488" starttime="20190130 00:08:10.456"></status>
+</suite>
+<status status="FAIL" endtime="20190130 00:08:10.488" starttime="20190130 00:08:10.063"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="2" pass="0">CHROME_TESTS</stat>
+<stat fail="1" pass="0">NEWS_PAGE</stat>
+<stat fail="1" pass="0">SMOKE_TESTS</stat>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Tests" pass="0">Tests</stat>
+<stat fail="1" id="s1-s1" name="News Page Tests" pass="0">Tests.News Page Tests</stat>
+<stat fail="1" id="s1-s2" name="Smoke Tests" pass="0">Tests.Smoke Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
