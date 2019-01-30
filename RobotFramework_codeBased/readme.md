@@ -14,3 +14,7 @@ a) this can be done once on library init, save related library instance for late
 --influence script execution order to make your script be executed after related script 
 --assign instance of related lirbary later, when it's needed
 3. besides that, everything is as in pure python+selenium
+
+
+related docs:
+https://github.com/robotframework/robotframework/blob/master/doc/userguide/src/ExtendingRobotFramework/CreatingTestLibraries.rst#what-methods-are-considered-keywords
