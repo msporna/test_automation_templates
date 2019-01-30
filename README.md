@@ -15,5 +15,5 @@ This requires team to be able to write and maintain python in order to create ne
 
 # Python + unittest
 
-Pure python. 
-todo
+pure python with selenium run by unittest framework and html test runner. Html report is poor compared to what robot framework gives but custom reporer can be written.
+no framework means the highest level of control and flexibility and clarity but requires highest python knowledege from team members.
