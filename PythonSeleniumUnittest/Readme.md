@@ -10,6 +10,8 @@ before test, set below env variables
 # ENV VARIABLES
 
 it is a good idea to use env variables set before test run for example in jenkins or in other way to setup tests. It is a better idea to use that and not some yaml file - you don't keep config in repo, repo is transparent, tests get cloned, env variables such as browser to use, software under test url etc. injected and used 
+--it seems safe: if run on linux, env variables injected by shell script (eg: run by jenkins build step before testing starts) exist only for duration of process and then dissapear. if other job starts,with other test suite at the same time, it has copy of system env variables and modifies them in its own scope, not other job's.
+--source:https://stackoverflow.com/questions/496702/can-a-shell-script-set-environment-variables-of-the-calling-shell
 
 list:
 <p>TEST_BROWSER - chrome,ff etc. on what browser test?
