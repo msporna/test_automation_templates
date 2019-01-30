@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190130 13:00:49.153" generator="Robot 3.1.1 (Python 2.7.12 on win32)">
+<suite source="C:\Users\Michal\Documents\testProjectTemplates\testProjectTemplates\RobotFramework_codeBased\Tests" id="s1" name="Tests">
+<suite source="C:\Users\Michal\Documents\testProjectTemplates\testProjectTemplates\RobotFramework_codeBased\Tests\news_page_tests.robot" id="s1-s1" name="News Page Tests">
+<test id="s1-s1-t1" name="Verify the sort combobox is present">
+<kw type="setup" name="Do Test Setup" library="Generic">
+<msg timestamp="20190130 13:00:49.389" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20190130 13:00:49.938" level="DEBUG">POST http://127.0.0.1:5374/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--disable-extensions", "--start-maximized", "--incognito", "--disable-popup-blocking", "--disable-default-apps", "--disable-infobars", "--headless", "--disable-gpu", "--user-agent=secret"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--disable-extensions", "--start-maximized", "--incognito", "--disable-popup-blocking", "--disable-default-apps", "--disable-infobars", "--headless", "--disable-gpu", "--user-agent=secret"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20190130 13:00:49.938" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1</msg>
+<msg timestamp="20190130 13:00:52.170" level="DEBUG">http://127.0.0.1:5374 "POST /session HTTP/1.1" 200 997</msg>
+<msg timestamp="20190130 13:00:52.170" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:52.170" level="DEBUG">DELETE http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/cookie {"sessionId": "a84aa56cd0836857edcff96d9dccf91d"}</msg>
+<msg timestamp="20190130 13:00:52.227" level="DEBUG">http://127.0.0.1:5374 "DELETE /session/a84aa56cd0836857edcff96d9dccf91d/cookie HTTP/1.1" 200 72</msg>
+<msg timestamp="20190130 13:00:52.227" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:52.227" level="DEBUG">POST http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/url {"url": "https://store.playstation.com/pl-pl/home/games", "sessionId": "a84aa56cd0836857edcff96d9dccf91d"}</msg>
+<msg timestamp="20190130 13:00:54.251" level="DEBUG">http://127.0.0.1:5374 "POST /session/a84aa56cd0836857edcff96d9dccf91d/url HTTP/1.1" 200 72</msg>
+<msg timestamp="20190130 13:00:54.252" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:54.252" level="DEBUG">POST http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/element {"using": "css selector", "sessionId": "a84aa56cd0836857edcff96d9dccf91d", "value": "a.store-logo"}</msg>
+<msg timestamp="20190130 13:00:54.271" level="DEBUG">http://127.0.0.1:5374 "POST /session/a84aa56cd0836857edcff96d9dccf91d/element HTTP/1.1" 200 102</msg>
+<msg timestamp="20190130 13:00:54.271" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:54.271" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20190130 13:00:54.271" starttime="20190130 13:00:49.389"></status>
+</kw>
+<kw name="Go To The News Page" library="MainPage">
+<msg timestamp="20190130 13:00:54.272" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20190130 13:00:54.272" level="DEBUG">POST http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/element {"using": "css selector", "sessionId": "a84aa56cd0836857edcff96d9dccf91d", "value": "div.application-container &gt; div &gt; div &gt; div &gt; div.left-panel &gt; ul:nth-child(2) &gt; a:nth-child(1)"}</msg>
+<msg timestamp="20190130 13:00:54.289" level="DEBUG">http://127.0.0.1:5374 "POST /session/a84aa56cd0836857edcff96d9dccf91d/element HTTP/1.1" 200 102</msg>
+<msg timestamp="20190130 13:00:54.290" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:54.290" level="DEBUG">POST http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/element/0.2280943294669766-2/click {"sessionId": "a84aa56cd0836857edcff96d9dccf91d", "id": "0.2280943294669766-2"}</msg>
+<msg timestamp="20190130 13:00:55.643" level="DEBUG">http://127.0.0.1:5374 "POST /session/a84aa56cd0836857edcff96d9dccf91d/element/0.2280943294669766-2/click HTTP/1.1" 200 72</msg>
+<msg timestamp="20190130 13:00:55.644" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:55.644" level="DEBUG">POST http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/element {"using": "css selector", "sessionId": "a84aa56cd0836857edcff96d9dccf91d", "value": "div.grid-header &gt; h3"}</msg>
+<msg timestamp="20190130 13:00:55.662" level="DEBUG">http://127.0.0.1:5374 "POST /session/a84aa56cd0836857edcff96d9dccf91d/element HTTP/1.1" 200 102</msg>
+<msg timestamp="20190130 13:00:55.662" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:55.662" level="INFO">Got instance of {news page library} in a version of 0.1</msg>
+<msg timestamp="20190130 13:00:55.663" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20190130 13:00:55.663" starttime="20190130 13:00:54.272"></status>
+</kw>
+<kw name="Verify Sort Combobox Is Present" library="NewsPage">
+<msg timestamp="20190130 13:00:55.663" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20190130 13:00:55.664" level="DEBUG">POST http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/element {"using": "css selector", "sessionId": "a84aa56cd0836857edcff96d9dccf91d", "value": "div.grid-header__right &gt; div:nth-child(2) &gt; div.select-dropdown"}</msg>
+<msg timestamp="20190130 13:00:55.680" level="DEBUG">http://127.0.0.1:5374 "POST /session/a84aa56cd0836857edcff96d9dccf91d/element HTTP/1.1" 200 102</msg>
+<msg timestamp="20190130 13:00:55.680" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:55.680" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20190130 13:00:55.680" starttime="20190130 13:00:55.663"></status>
+</kw>
+<kw type="teardown" name="Do Test Teardown" library="Generic">
+<msg timestamp="20190130 13:00:55.681" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20190130 13:00:55.681" level="DEBUG">DELETE http://127.0.0.1:5374/session/a84aa56cd0836857edcff96d9dccf91d/window {"sessionId": "a84aa56cd0836857edcff96d9dccf91d"}</msg>
+<msg timestamp="20190130 13:00:55.706" level="DEBUG">http://127.0.0.1:5374 "DELETE /session/a84aa56cd0836857edcff96d9dccf91d/window HTTP/1.1" 200 70</msg>
+<msg timestamp="20190130 13:00:55.706" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:55.706" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20190130 13:00:55.706" starttime="20190130 13:00:55.681"></status>
+</kw>
+<doc>test2</doc>
+<tags>
+<tag>CHROME_TESTS</tag>
+<tag>NEWS_PAGE</tag>
+</tags>
+<status status="PASS" endtime="20190130 13:00:55.706" critical="yes" starttime="20190130 13:00:49.389"></status>
+</test>
+<doc>test cases related to ...</doc>
+<status status="PASS" endtime="20190130 13:00:55.706" starttime="20190130 13:00:49.184"></status>
+</suite>
+<suite source="C:\Users\Michal\Documents\testProjectTemplates\testProjectTemplates\RobotFramework_codeBased\Tests\smoke_tests.robot" id="s1-s2" name="Smoke Tests">
+<test id="s1-s2-t1" name="Verify sony logo has a correct related link">
+<kw type="setup" name="Do Test Setup" library="Generic">
+<msg timestamp="20190130 13:00:55.753" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20190130 13:00:56.281" level="DEBUG">POST http://127.0.0.1:5407/session {"capabilities": {"alwaysMatch": {"goog:chromeOptions": {"args": ["--disable-extensions", "--start-maximized", "--incognito", "--disable-popup-blocking", "--disable-default-apps", "--disable-infobars", "--headless", "--disable-gpu", "--user-agent=secret"], "extensions": []}, "browserName": "chrome", "platformName": "any"}, "firstMatch": [{}]}, "desiredCapabilities": {"goog:chromeOptions": {"args": ["--disable-extensions", "--start-maximized", "--incognito", "--disable-popup-blocking", "--disable-default-apps", "--disable-infobars", "--headless", "--disable-gpu", "--user-agent=secret"], "extensions": []}, "platform": "ANY", "browserName": "chrome", "version": ""}}</msg>
+<msg timestamp="20190130 13:00:56.282" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1</msg>
+<msg timestamp="20190130 13:00:58.908" level="DEBUG">http://127.0.0.1:5407 "POST /session HTTP/1.1" 200 997</msg>
+<msg timestamp="20190130 13:00:58.923" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:58.923" level="DEBUG">DELETE http://127.0.0.1:5407/session/f1022858c8e05606a00ffd123807f3d4/cookie {"sessionId": "f1022858c8e05606a00ffd123807f3d4"}</msg>
+<msg timestamp="20190130 13:00:59.011" level="DEBUG">http://127.0.0.1:5407 "DELETE /session/f1022858c8e05606a00ffd123807f3d4/cookie HTTP/1.1" 200 72</msg>
+<msg timestamp="20190130 13:00:59.012" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:00:59.012" level="DEBUG">POST http://127.0.0.1:5407/session/f1022858c8e05606a00ffd123807f3d4/url {"url": "https://store.playstation.com/pl-pl/home/games", "sessionId": "f1022858c8e05606a00ffd123807f3d4"}</msg>
+<msg timestamp="20190130 13:01:01.261" level="DEBUG">http://127.0.0.1:5407 "POST /session/f1022858c8e05606a00ffd123807f3d4/url HTTP/1.1" 200 72</msg>
+<msg timestamp="20190130 13:01:01.262" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:01:01.262" level="DEBUG">POST http://127.0.0.1:5407/session/f1022858c8e05606a00ffd123807f3d4/element {"using": "css selector", "sessionId": "f1022858c8e05606a00ffd123807f3d4", "value": "a.store-logo"}</msg>
+<msg timestamp="20190130 13:01:01.282" level="DEBUG">http://127.0.0.1:5407 "POST /session/f1022858c8e05606a00ffd123807f3d4/element HTTP/1.1" 200 102</msg>
+<msg timestamp="20190130 13:01:01.283" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:01:01.283" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20190130 13:01:01.283" starttime="20190130 13:00:55.753"></status>
+</kw>
+<kw name="Get Sony Icon Url" library="MainPage">
+<assign>
+<var>${sony_icon_url}</var>
+</assign>
+<msg timestamp="20190130 13:01:01.284" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20190130 13:01:01.284" level="DEBUG">POST http://127.0.0.1:5407/session/f1022858c8e05606a00ffd123807f3d4/element {"using": "css selector", "sessionId": "f1022858c8e05606a00ffd123807f3d4", "value": "header &gt; div &gt; div &gt; div.container &gt; a.make-believe-header__icon"}</msg>
+<msg timestamp="20190130 13:01:01.299" level="DEBUG">http://127.0.0.1:5407 "POST /session/f1022858c8e05606a00ffd123807f3d4/element HTTP/1.1" 200 102</msg>
+<msg timestamp="20190130 13:01:01.300" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:01:01.301" level="DEBUG">GET http://127.0.0.1:5407/session/f1022858c8e05606a00ffd123807f3d4/element/0.9165863676692592-2/attribute/href {"sessionId": "f1022858c8e05606a00ffd123807f3d4", "name": "href", "id": "0.9165863676692592-2"}</msg>
+<msg timestamp="20190130 13:01:01.307" level="DEBUG">http://127.0.0.1:5407 "GET /session/f1022858c8e05606a00ffd123807f3d4/element/0.9165863676692592-2/attribute/href HTTP/1.1" 200 99</msg>
+<msg timestamp="20190130 13:01:01.307" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:01:01.307" level="TRACE">Return: 'http://www.sony.net/SonyInfo/'</msg>
+<msg timestamp="20190130 13:01:01.307" level="INFO">${sony_icon_url} = http://www.sony.net/SonyInfo/</msg>
+<status status="PASS" endtime="20190130 13:01:01.308" starttime="20190130 13:01:01.284"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${sony_icon_url}</arg>
+<arg>http://www.sony.net/SonyInfo/</arg>
+</arguments>
+<msg timestamp="20190130 13:01:01.308" level="TRACE">Arguments: [ 'http://www.sony.net/SonyInfo/' | 'http://www.sony.net/SonyInfo/' ]</msg>
+<msg timestamp="20190130 13:01:01.309" level="DEBUG">Argument types are:
+&lt;type 'unicode'&gt;
+&lt;type 'unicode'&gt;</msg>
+<msg timestamp="20190130 13:01:01.309" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20190130 13:01:01.309" starttime="20190130 13:01:01.308"></status>
+</kw>
+<kw type="teardown" name="Do Test Teardown" library="Generic">
+<msg timestamp="20190130 13:01:01.309" level="TRACE">Arguments: [  ]</msg>
+<msg timestamp="20190130 13:01:01.310" level="DEBUG">DELETE http://127.0.0.1:5407/session/f1022858c8e05606a00ffd123807f3d4/window {"sessionId": "f1022858c8e05606a00ffd123807f3d4"}</msg>
+<msg timestamp="20190130 13:01:01.334" level="DEBUG">http://127.0.0.1:5407 "DELETE /session/f1022858c8e05606a00ffd123807f3d4/window HTTP/1.1" 200 70</msg>
+<msg timestamp="20190130 13:01:01.334" level="DEBUG">Finished Request</msg>
+<msg timestamp="20190130 13:01:01.334" level="TRACE">Return: None</msg>
+<status status="PASS" endtime="20190130 13:01:01.334" starttime="20190130 13:01:01.309"></status>
+</kw>
+<doc>test1</doc>
+<tags>
+<tag>CHROME_TESTS</tag>
+<tag>SMOKE_TESTS</tag>
+</tags>
+<status status="PASS" endtime="20190130 13:01:01.334" critical="yes" starttime="20190130 13:00:55.737"></status>
+</test>
+<doc>test cases related to ...</doc>
+<status status="PASS" endtime="20190130 13:01:01.334" starttime="20190130 13:00:55.722"></status>
+</suite>
+<status status="PASS" endtime="20190130 13:01:01.334" starttime="20190130 13:00:49.153"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">CHROME_TESTS</stat>
+<stat fail="0" pass="1">NEWS_PAGE</stat>
+<stat fail="0" pass="1">SMOKE_TESTS</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Tests" pass="2">Tests</stat>
+<stat fail="0" id="s1-s1" name="News Page Tests" pass="1">Tests.News Page Tests</stat>
+<stat fail="0" id="s1-s2" name="Smoke Tests" pass="1">Tests.Smoke Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
