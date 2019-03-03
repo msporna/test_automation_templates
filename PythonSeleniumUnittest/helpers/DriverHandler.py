@@ -12,13 +12,14 @@ def setup_webdriver():
     if browser_to_use=="chrome":
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument("--disable-extensions")
-        chrome_options.add_argument("--start-maximized")
+        chrome_options.add_argument("--window-size=1420,1080")
         chrome_options.add_argument("--incognito")
         chrome_options.add_argument("--disable-popup-blocking")
         chrome_options.add_argument("--disable-default-apps")
         chrome_options.add_argument("--disable-infobars")
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--disable-gpu")
+		chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument(
             '--user-agent=secret')  # just to ilustrate how to set chrome options that have value assigned
         web_driver = webdriver.Chrome(desired_capabilities=chrome_options.to_capabilities())

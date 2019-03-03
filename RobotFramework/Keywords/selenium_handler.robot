@@ -11,7 +11,7 @@ Library     Screenshot
 Create chrome driver
     ${options}=      BuiltIn.Evaluate        sys.modules['selenium.webdriver'].ChromeOptions()       sys
     Call Method          ${options}          add_argument        --headless
-    Call Method          ${options}          add_argument        --start-maximized
+    Call Method          ${options}          add_argument        --window-size=1420,1080
     Call Method          ${options}          add_argument        --no-sandbox
     Call Method          ${options}          add_argument        --disable-extensions
     Call Method          ${options}          add_argument        --disable-infobars
