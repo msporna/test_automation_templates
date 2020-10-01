@@ -18,7 +18,7 @@ more: https://github.com/typicode/json-server#getting-started
 in the console as tests are being executed by pytest)
 3. tests will run against the mock rest api
 
-# allure repots
+# allure reports
 
 to enable allure reports:
 1. run with command: `py.test -s -m smoke --alluredir=allure-results`
