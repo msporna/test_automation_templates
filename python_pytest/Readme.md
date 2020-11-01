@@ -9,7 +9,7 @@ npm install -g json-server
 
 more: https://github.com/typicode/json-server#getting-started
 
- * this mock will be tested by the sample behave tests
+ * this mock will be tested by the sample tests
  * run with: `json-server --watch data.json`
  * host is `http://localhost:3000`
  * sample GET is: `http://localhost:3000/posts/1`
