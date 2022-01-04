@@ -1,16 +1,15 @@
 import pytest
 from src.common.test_data_handler import TestDataHandler
 from src.common.webdriver_handler import WebDriverHandler
-from src.config import Config
 from src.common.api_manager import ApiManager
 
 
 @pytest.fixture(scope="session")
 def api_manager():
-    return ApiManager(Config.app_host)
+    return ApiManager()
 
 @pytest.fixture(scope="session")
-def test_data_handler(scope="session"):
+def test_data_handler():
     return TestDataHandler()
 
 @pytest.fixture(scope="function")

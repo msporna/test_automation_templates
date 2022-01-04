@@ -1,11 +1,9 @@
 import requests
-from config import Config
+from src.config import Config
 
 
 class ApiManager:
 
-    def __init__(self, host):
-        self.host = host
 
     def _determine_host(self):
         return Config.api_host

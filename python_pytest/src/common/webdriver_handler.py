@@ -1,7 +1,8 @@
-from config import Config
+
 from selenium import webdriver
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.support.wait import WebDriverWait
+from src.config import Config
 
 
 class WebDriverHandler:

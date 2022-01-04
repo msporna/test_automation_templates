@@ -1,5 +1,6 @@
-from config import Config
+
 from src.common.web_page_template import WebPageTemplate
+from src.config import Config
 from src.locators.main_page_locators import MainPageLocators
 from src.pages.downloads_page import DownloadsPage
 
