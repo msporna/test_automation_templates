@@ -1,3 +1,7 @@
 pytest
 requests
 allure-pytest
+selenium
+python-benedict
+deepdiff
+requests

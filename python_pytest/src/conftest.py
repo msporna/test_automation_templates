@@ -1,19 +1,25 @@
 import pytest
+from src.common.test_data_handler import TestDataHandler
+from src.common.webdriver_handler import WebDriverHandler
 from src.config import Config
-from src.util.api_manager import ApiManager
+from src.common.api_manager import ApiManager
 
 
 @pytest.fixture(scope="session")
 def api_manager():
     return ApiManager(Config.app_host)
 
+@pytest.fixture(scope="session")
+def test_data_handler(scope="session"):
+    return TestDataHandler()
 
 @pytest.fixture(scope="function")
-def disposable_example():
+def webdriver_handler():
     """
     function scope - fixture is destroyed after each test
     :return:
     """
-    var1 = "x"  # this could be a webdriver
-    yield var1  # test executed here
-    var1 = "y"  # cleaning (not used in test but can do some cleanup with still existing var1 obj)
+    webdriver=WebDriverHandler()
+    webdriver.setup()
+    yield webdriver # test is executed here
+    webdriver.quit()
