@@ -9,7 +9,7 @@ class TestFrontend:
         main_page=MainPage(webdriver_handler)
         main_page.visit()
         main_page.verify_stable_release_version("ChromeDriver 96.0.4664.45")
-        main_page.verify_beta_release_version("ChromeDriver 97.0.4692.36")
+        main_page.verify_beta_release_version("ChromeDriver 97.0.4692.71")
 
 
     @pytest.mark.smoke_gui

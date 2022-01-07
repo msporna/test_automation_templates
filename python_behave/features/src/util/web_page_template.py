@@ -17,7 +17,7 @@ class WebPageTemplate:
         # get element by selector
         element = self.web_elements_cache.get(selector, None)
         if element is None or self.context.web_driver_handler.is_element_stale(element):
-            element = self.context.web_driver_handler.find_element(selector)
+            element = self.context.web_driver_handler.find_element_with_explicit_wait(selector)
             # refresh in cache
             self.web_elements_cache[selector] = element
         # return

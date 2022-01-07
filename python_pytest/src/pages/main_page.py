@@ -31,8 +31,8 @@ class MainPage(WebPageTemplate):
 
     def verify_stable_release_version(self, expected_version):
         stable_version = self.get_stable_version_label().text
-        assert stable_version == expected_version, f"Stable release version is not what was expected ({expected_version})"
+        assert stable_version == expected_version, f"Stable release version is not what was expected ({expected_version} vs on the page: {stable_version})"
 
     def verify_beta_release_version(self, expected_version):
         beta_version = self.get_beta_version_label().text
-        assert beta_version == expected_version, f"Beta release version is not what we expected ({expected_version})"
+        assert beta_version == expected_version, f"Beta release version is not what we expected ({expected_version} vs on the page: {beta_version})"
