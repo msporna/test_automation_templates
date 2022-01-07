@@ -1,9 +1,7 @@
 class WebPageTemplate:
 
-    def __init__(self, context):
-        self.context = context
-        # found web element instances are stored in a dict
-        # so are easier to mange
+    def __init__(self, webdriver_handler):
+        self.web_driver_handler=webdriver_handler
         self.web_elements_cache = {}
 
     def get_element(self, selector):
@@ -16,8 +14,8 @@ class WebPageTemplate:
         """
         # get element by selector
         element = self.web_elements_cache.get(selector, None)
-        if element is None or self.context.web_driver_handler.is_element_stale(element):
-            element = self.context.web_driver_handler.find_element_with_explicit_wait(selector)
+        if element is None or self.web_driver_handler.is_element_stale(element):
+            element = self.web_driver_handler.find_element_with_explicit_wait(selector)
             # refresh in cache
             self.web_elements_cache[selector] = element
         # return
@@ -29,11 +27,11 @@ class WebPageTemplate:
         and if it's found then good, otherwise assume page could not be loaded and throw an exception
         :return:
         """
-        self.context.web_driver_handler.find_element(selector)
+        self.web_driver_handler.find_element(selector)
 
     def visit_and_verify(self, url, verification_selector):
         # go to the main page
-        self.context.web_driver_handler.visit(url)
+        self.web_driver_handler.visit(url)
         # verify it was loaded
         self.verify_page_has_been_loaded(verification_selector)
 
@@ -43,4 +41,4 @@ class WebPageTemplate:
         :param index:
         :return:
         """
-        self.context.web_driver_handler.select_tab(index)
+        self.web_driver_handler.select_tab(index)

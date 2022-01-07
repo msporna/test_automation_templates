@@ -1,3 +1,6 @@
 behave
 selenium
 allure-behave
+deepdiff
+requests
+python-benedict

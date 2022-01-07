@@ -1,8 +1,8 @@
 # overview
 
-This folder contains sample frontend tests written in Python along with Behave framework (BDD). 
+This folder contains sample frontend and backend (rest api) tests written in Python along with Behave framework (BDD). 
 I created a sample test that will go to 'https://chromedriver.chromium.org/' website and check if latest stable
-and beta releases listed over there are '85.0.4183.87' and '86.0.4240.22' (the latest at this moment).
+and beta releases listed over there.
 
 If the https://chromedriver.chromium.org/ page lists different version on the main page now, update the tests with
 the latest numbers or see them fail which will prove the tests are working.
@@ -16,6 +16,48 @@ correct version.
 1. download chromedriver for your platform and add it to PATH (in real life can be done via docker)
 2. ensure you have chrome installed
 3. from the root folder run `behave --tags @smoke_tests`
+
+4. see Readme in `api_mock` folder if you want to run the `@smoke_tests_api` (backend) tests as well.
+a. Backend tests rely on: api_mock/db.json and test_data/expected_response_1.json, the initial content must be:
+
+db.json
+```
+{
+  "versions": [
+    {
+      "id": 1,
+      "title": "stable",
+      "ver": "96.0.4664.45"
+    },
+    {
+      "id": 2,
+      "title": "beta",
+      "ver": "97.0.4692.36"
+    }
+  ]
+}
+```
+
+expected_response_1.json
+```
+[
+  {
+    "id": 1,
+    "title": "stable",
+    "ver": "96.0.4664.45"
+  },
+  {
+    "id": 2,
+    "title": "beta",
+    "ver": "97.0.4692.36"
+  },
+  {
+    "title": "test",
+    "ver": "2021",
+    "id": 3
+  }
+]
+```
 
 # Additional knowledge & tricks
 
